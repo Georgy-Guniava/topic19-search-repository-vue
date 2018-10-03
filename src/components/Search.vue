@@ -23,7 +23,7 @@
       </div>
       <div class="search-input">
         <label for="search-input">Type here for search</label>
-        <input id="search-input" type="text" v-on:input="searchText = $event.target.value" :value="searchText">
+        <input :class="{ 'red-border': errorFlag }" id="search-input" type="text" v-on:input="searchText = $event.target.value" :value="searchText">
         <div v-if="errorFlag" class="error search-error">
           <span>Please fill out the form completely!</span>
         </div>
@@ -274,5 +274,9 @@
     align-self: center;
     bottom: -20px;
     right: 0;
+  }
+
+  .red-border {
+    border-color: red !important;
   }
 </style>
