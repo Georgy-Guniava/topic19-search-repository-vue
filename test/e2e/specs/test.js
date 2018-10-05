@@ -11,9 +11,17 @@ module.exports = {
     browser
       .url(devServer)
       .waitForElementVisible('#app', 5000)
-      .assert.elementPresent('.hello')
-      .assert.containsText('h1', 'Welcome to Your Vue.js App')
-      .assert.elementCount('img', 1)
-      .end()
+      .assert.elementPresent('#app')
+      .assert.containsText('.logo__text h4', 'GitHub')
+      .assert.containsText('.logo__text p', 'search')
+      .assert.containsText('.without-repository h4', 'NO RESULTS FOUND')
+      .assert.containsText('.without-repository p', 'select other parameters and try again')
+      .assert.containsText('.search-input label', 'Type here for search')
+      .assert.elementPresent('.search-btn')
+      .click('.search-btn')
+      .assert.cssClassPresent(".search-input input", "red-border")
+      .end();
+
+    // browser.click('.search-btn')
   }
 }
