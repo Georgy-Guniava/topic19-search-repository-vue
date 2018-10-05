@@ -7,9 +7,9 @@
         </select>
       </div>
       <div class="language">
-        <select v-on:change="language = $event.target.value">
+        <select id="languageSelect" v-on:change="language = $event.target.value">
           <option>JavaScript</option>
-          <option>css</option>
+          <option value="css">css</option>
           <option>html</option>
           <option>php</option>
           <option>ruby</option>
