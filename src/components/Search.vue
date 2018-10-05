@@ -77,7 +77,7 @@
       }
     },
     methods: {
-      parsToRepo(items) {
+      parseToRepo(items) {
         return items.map(item => {
           return {
             id: item.id,
@@ -125,7 +125,7 @@
 
         axios(options)
           .then((res) => {
-              this.repositories = this.parsToRepo(res.data.items);
+              this.repositories = this.parseToRepo(res.data.items);
               this.notFoundFlag = !res.data.items.length;
           })
           .catch((error) => {
