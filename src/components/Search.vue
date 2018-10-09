@@ -22,8 +22,13 @@
         </select>
       </div>
       <div class="search-input">
-        <label for="search-input">Type here for search</label>
-        <input :class="{ 'red-border': errorFlag }" id="search-input" type="text" v-on:input="searchText = $event.target.value" :value="searchText">
+        <label :class="{'label1': !searchText}" for="search-input">Type here for search</label>
+        <input :class="{ 'red-border': errorFlag }"
+               id="search-input"
+               type="text"
+               v-on:input="searchText = $event.target.value"
+               :value="searchText"
+               v-on:focus="errorFlag = false">
         <div v-if="errorFlag" class="error search-error">
           <span>Please fill out the form completely!</span>
         </div>
@@ -211,6 +216,15 @@
     font-family: Roboto;
     font-size: 12px;
     color: #0366D6;
+  }
+
+  .search-input .label1 {
+    font-family: Roboto;
+    font-weight: 300;
+    font-size: 14px;
+    color: black;
+    position: absolute;
+    top: 4px;
   }
 
   .search-btn {
