@@ -13,7 +13,7 @@ export default new Router({
       redirect: '/topic19-search-repository-vue/search',
     },
     {
-      path: '/topic19-search-repository-vue//search',
+      path: '/topic19-search-repository-vue/search',
       name: 'Search',
       component: Search
     },
