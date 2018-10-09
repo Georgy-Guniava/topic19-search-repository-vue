@@ -9,8 +9,8 @@ export default new Router({
   mode: 'history',
   routes: [
     {
-      path: '/',
-      redirect: 'search',
+      path: '/topic19-search-repository-vue',
+      redirect: '/topic19-search-repository-vue/search',
     },
     {
       path: '/search',
@@ -18,7 +18,7 @@ export default new Router({
       component: Search
     },
     {
-      path: '/my-list',
+      path: '/topic19-search-repository-vue/my-list',
       name: 'MyList',
       component: MyList
     }
