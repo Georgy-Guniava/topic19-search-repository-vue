@@ -50,24 +50,14 @@ module.exports = {
       },
       {
         test: /\.(svg)(\?.*)?$/,
-        use: [
-          {loader: 'url-loader',
-            options: {
-              limit: 10000,
-              name: utils.assetsPath('img/[name].[hash:7].[ext]')
+        loader: 'svgo-loader',
+        options: {
+          plugins: [
+            {removeTitle: true},
+            {convertColors: {shorthex: false}},
+            {convertPathData: false}
+          ]
             }
-          },
-          {
-            loader: 'svgo-loader',
-            options: {
-              plugins: [
-                {removeTitle: true},
-                {convertColors: {shorthex: false}},
-                {convertPathData: false}
-              ]
-            }
-          }
-        ]
       },
       {
         test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,
