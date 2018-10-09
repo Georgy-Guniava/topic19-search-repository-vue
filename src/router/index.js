@@ -9,16 +9,16 @@ export default new Router({
   mode: 'history',
   routes: [
     {
-      path: '/topic19-search-repository-vue/',
+      path: '/',
       redirect: 'search',
     },
     {
-      path: '/topic19-search-repository-vue/search',
+      path: '/search',
       name: 'Search',
       component: Search
     },
     {
-      path: '/topic19-search-repository-vue/my-list',
+      path: '/my-list',
       name: 'MyList',
       component: MyList
     }
