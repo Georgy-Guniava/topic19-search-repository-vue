@@ -2,6 +2,36 @@
 
 > A Vue.js project
 
+Optimization of the project was carried out in the production branch
+
+loading the search page before optimization
+
+page size 97.2 kB 
+
+load time 1,13 s
+
+![loading the search page-before.png](https://github.com/Georgy-Guniava/topic19-search-repository-vue/raw/production/screenshots/loading-the-search-page_before.png)
+
+Images were clamped for optimization. For this I used the ImageOptim application.
+Was removed unnecessary decorators font.
+
+Final font reference:
+<link href='https://fonts.googleapis.com/css?family=Roboto:100,300,400' rel='stylesheet' type='text/css'>
+
+
+loading the search page after optimization
+
+page size 81.2 kB
+
+load time 712 ms
+
+![loading the search page-after.png](https://github.com/Georgy-Guniava/topic19-search-repository-vue/raw/production/screenshots/loading-the-search-page_after.png)
+
+Build size: before 1.3 MB, after 885 KB
+
+
+![builds](https://github.com/Georgy-Guniava/topic19-search-repository-vue/raw/production/screenshots/builds.png)
+
 ## Build Setup
 
 ``` bash
