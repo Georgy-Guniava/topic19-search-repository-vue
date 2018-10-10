@@ -7,9 +7,9 @@
         </select>
       </div>
       <div class="language">
-        <select v-on:change="language = $event.target.value">
+        <select id="languageSelect" v-on:change="language = $event.target.value">
           <option>JavaScript</option>
-          <option>css</option>
+          <option value="css">css</option>
           <option>html</option>
           <option>php</option>
           <option>ruby</option>
@@ -82,7 +82,7 @@
       }
     },
     methods: {
-      parsToRepo(items) {
+      parseToRepo(items) {
         return items.map(item => {
           return {
             id: item.id,
@@ -130,7 +130,7 @@
 
         axios(options)
           .then((res) => {
-              this.repositories = this.parsToRepo(res.data.items);
+              this.repositories = this.parseToRepo(res.data.items);
               this.notFoundFlag = !res.data.items.length;
           })
           .catch((error) => {
