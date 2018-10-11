@@ -43,7 +43,7 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/topic19-search-repository-vue',
+    assetsPublicPath: '/topic19-search-repository-vue/',
 
     /**
      * Source Maps
