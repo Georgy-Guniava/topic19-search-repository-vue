@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Search from '../components/Search'
 import MyList from '../components/MyList'
+import PUBLIC_PATH from '../constants/publicConstants'
 
 Vue.use(Router);
 
@@ -9,16 +10,16 @@ export default new Router({
   mode: 'history',
   routes: [
     {
-      path: '/topic19-search-repository-vue',
-      redirect: '/topic19-search-repository-vue/search',
+      path: PUBLIC_PATH,
+      redirect: PUBLIC_PATH + '/search',
     },
     {
-      path: '/topic19-search-repository-vue/search',
+      path: PUBLIC_PATH + '/search',
       name: 'Search',
       component: Search
     },
     {
-      path: '/topic19-search-repository-vue/my-list',
+      path: PUBLIC_PATH + '/my-list',
       name: 'MyList',
       component: MyList
     }

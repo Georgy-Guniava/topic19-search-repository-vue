@@ -13,10 +13,10 @@
       </div>
       <div class="nav-bar">
         <div class="nav__search">
-          <router-link id="search" active-class="active" to="/topic19-search-repository-vue/search"><span>Search</span></router-link>
+          <router-link id="search" active-class="active" :to="publicPath + '/search'"><span>Search</span></router-link>
         </div>
         <div class=" nav__my-list">
-          <router-link id="my-list" active-class="active" to="/topic19-search-repository-vue/my-list"><span>My List</span></router-link>
+          <router-link id="my-list" active-class="active" :to="publicPath +'/my-list'"><span>My List</span></router-link>
         </div>
       </div>
     </div>
@@ -24,11 +24,13 @@
 </template>
 
 <script>
+import PUBLIC_PATH from '../constants/publicConstants'
+
 export default {
   name: 'Header',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      publicPath: PUBLIC_PATH
     }
   }
 }
