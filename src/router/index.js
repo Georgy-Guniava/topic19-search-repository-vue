@@ -5,7 +5,6 @@ import MyList from '../components/MyList'
 import PUBLIC_PATH from '../constants/publicConstants'
 
 Vue.use(Router);
-console.log('PUBLIC_PATH + \'/search\'',PUBLIC_PATH + '/search');
 
 export default new Router({
   mode: 'history',
