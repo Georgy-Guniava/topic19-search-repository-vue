@@ -8,19 +8,18 @@ Vue.use(Router);
 
 export default new Router({
   mode: 'history',
-  base: PUBLIC_PATH,
   routes: [
     {
-      path: '/',
-      redirect: '/search',
+      path: PUBLIC_PATH,
+      redirect: PUBLIC_PATH + 'search',
     },
     {
-      path: '/search',
+      path: PUBLIC_PATH + 'search',
       name: 'Search',
       component: Search
     },
     {
-      path: '/my-list',
+      path: PUBLIC_PATH + 'my-list',
       name: 'MyList',
       component: MyList
     }
